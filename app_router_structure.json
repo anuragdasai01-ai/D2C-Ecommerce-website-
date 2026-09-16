@@ -1,0 +1,27 @@
+/src
+  /app
+    /(storefront)
+      /page.tsx                 # Homepage (Hero, Best Sellers, Categories)
+      /shop/page.tsx            # Product Listing Page (Filters, Pagination)
+      /product/[slug]/page.tsx  # Product Details Page (Gallery, Variants)
+      /cart/page.tsx            # Cart & Order Summary
+      /checkout/page.tsx        # Guest/Auth Checkout & Razorpay
+      /order-success/page.tsx   # Order Confirmation
+    /(auth)
+      /login/page.tsx
+      /register/page.tsx
+    /(account)
+      /account/page.tsx         # Order History, Profile
+    /(admin)
+      /admin/layout.tsx         # Protected Admin Layout
+      /admin/dashboard/page.tsx
+      /admin/products/page.tsx
+  /components
+    /ui                         # Reusable Tailwind components (Buttons, Inputs)
+    /storefront                 # Header, Footer, ProductCard, CartDrawer
+    /admin                      # Admin tables, charts, forms
+  /lib
+    /supabase                   # Supabase client (browser & server)
+    /razorpay                   # Razorpay instance & verification logic
+    /actions                    # Next.js Server Actions (Mutations)
+    /utils.ts                   # Tailwind merge, formatting utilities
